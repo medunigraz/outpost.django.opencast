@@ -9,20 +9,27 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='GroupMap',
+            name="GroupMap",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('group', models.CharField(max_length=128)),
-                ('dn', models.CharField(max_length=512)),
-                ('filter', models.TextField(blank=True, null=True)),
-                ('enabled', models.BooleanField(default=False)),
-                ('username_field', models.CharField(max_length=128)),
-                ('email_field', models.CharField(max_length=128)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("group", models.CharField(max_length=128)),
+                ("dn", models.CharField(max_length=512)),
+                ("filter", models.TextField(blank=True, null=True)),
+                ("enabled", models.BooleanField(default=False)),
+                ("username_field", models.CharField(max_length=128)),
+                ("email_field", models.CharField(max_length=128)),
             ],
-        ),
+        )
     ]
